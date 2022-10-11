@@ -6,5 +6,108 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core"> building Web apps with ASP.NET Core</a></p>
+</div>
+
+<div class="card col-lg-6">
+    <div class="card-body">
+        <form method="Post">
+            <div class="form-group">
+                <label asp-for="Value.AirConditionUnits"></label>
+                <select class="form-control" id="exampleControlSelect1">
+                    <option selected>Select Units</option>
+                    <option value="AirConditionUnits">Condura WCONZ00BEC1</option>
+                    <option value="AirConditionUnits">LG LA150EC</option>
+                    <option value="AirConditionUnits">Samsyng AR09TYHEWKNTC</option>
+                </select>
+
+            </div>
+            <br />
+            <div class="form-check-group">
+                <label asp-for="Value.Wattage"></label>
+                <label asp-for="Value.Wattage" type="decimal" class="form-control" aria-describedby="wattageHelp">
+                    <div asp-for="Value.Wattage" id="wattageHelp" class="form-text">
+                        <select class="form-control" id="exampleFormCOntrolSelect2">
+                            <option selected>Wattage Used</option>
+                            <option value="1170">1170W</option>
+                            <option value="1732">1732W</option>
+                            <option value="1830">1830W</option>
+                        </select>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label asp-for="Value.Hours"></label>
+                        <input asp-for="Value.Hours" type="decimal" class="form-control" aria-describedby="hoursHelp" />                  I
+                        <div asp-for="Value.Hours" id="hoursHelp" class="form-text">
+                            <select class="form-control" id="exampleFormCOntrolSelect2">
+                                <option selected>Hours Used</option>
+                                <option value="5">5hrs</option>
+                                <option value="10">10hrs</option>
+                                <option value="3">15hrs</option>
+                                <option value="4">20hrs</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label asp-for="Value.Generation"></label>
+                        <input asp-for="Value.Generation" type="decimal" class="form-control" aria-describedby="generationHelp" />                  I
+                        <div asp-for="Value.generation" id="generationHelp" class="form-text">
+                            <select class="form-control" id="exampleFormCOntrolSelect3">
+                                <option selected>Select Generation Rate</option>
+                                <option selected>Generation Used</option>
+                                <option value="9.00">9.00Php</option>
+                                <option value="15">15Php</option>
+                                <option value="21">21Php</option>
+                                <option value="27">27Php</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+                    <br />
+                    <div class="form-group">
+                        <label asp-for="Value.Distribution"></label>
+                        <input asp-for="Value.Distribution" type="decimal" class="form-control" aria-describedby="distributionHelp" />                  I
+                        <div asp-for="Value.distribution" id="distributionHelp" class="form-text">
+                            <select class="form-control" id="exampleFormCOntrolSelect3">
+                                <option selected>Select Distribution Used</option>
+                                <option value="0.4613">0.4613Php</option>
+                                <option value="0.3644">0.3644Php</option>
+                                <option value="0.2389">0.2389</option>
+
+
+                            </select>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label asp-for="Value.Transmission"></label>
+                        <input asp-for="Value.Transmission" type="decimal" class="form-control" aria-describedby="transmissionnHelp" />                  I
+                        <div asp-for="Value.transmission" id="transmissionHelp" class="form-text">
+                            <select class="form-control" id="exampleFormCOntrolSelect3">
+                                <option selected>Select Transmission Used</option>
+                                <option value="0.1110">0.1110Php</option>
+                                <option value="0.1210">0.1210Php</option>
+                                <option value="0.2110">0.2110Php</option>
+                                <option value="0.2200">0.2200Php</option>
+                                <option value="0.2110">0.3100Php</option>
+                                <option value="0.2110">0.3200Php</option>
+                            </select>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="card col-lg-6">
+                        <div class="card-body">
+                            <h2>@Model.Value.Mark</h2>
+                            <span>@Model.Value.Description</span>
+                            <h3>@Model.Value.Message</h3>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+
+                </label>
+            </div>
+        </form>
+    </div>
 </div>
